@@ -21,6 +21,7 @@ function HomePage() {
   const handleCreateProduct = async () => {
     await apiService.createProduct(productName).then(() => {
       fetchProducts();
+      setProductName("");
       setActive(false);
     });
   };
